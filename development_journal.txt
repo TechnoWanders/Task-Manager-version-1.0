@@ -1,0 +1,11 @@
+4 May 2024 
+--> index page created  
+--> responsive rules followed
+--> learned routing 
+--> font styling done 
+next work 
+--> create sigin in database
+--> create signin in page 
+--> create login page 
+--> learn session management
+--> use of JWT for secured session 

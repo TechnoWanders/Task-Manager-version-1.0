@@ -1,0 +1,53 @@
+body{
+    font-family: sans-serif;
+}
+
+.banner {
+    font-family: "Briem Hand", cursive;
+    width:40vw;
+    height:auto;
+    background-color: red;
+    position: absolute;
+    top:10%;
+    left:30%;
+    box-sizing: border-box;
+    padding: 0px 13px;
+    border: 2px solid black;
+}
+
+.section1{
+    width:17vh;
+    position: absolute;
+    justify-content: space-between;
+    display: flex;
+    position: fixed;
+    top: 35vh;
+    left: 50vw;
+    margin-top: 5vh;
+    
+}
+
+.section1 button{
+    font-size: large;
+    background-color: aqua;
+    transition: background-color .5s;
+}
+
+.section1 button:hover{
+    background-color: grey;
+    color: white;
+}
+
+@media screen and (max-width: 1382px){
+    .banner{
+        left:0%;
+        width:100vw;
+    }
+
+    .section1{
+       width:20vh;
+       left:35vw;
+       margin-top: 15vh;
+       justify-content: space-between;
+    }
+}
