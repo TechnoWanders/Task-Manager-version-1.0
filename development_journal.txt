@@ -9,3 +9,9 @@ next work
 --> create login page 
 --> learn session management
 --> use of JWT for secured session 
+5 May 2024
+--> created OTP system
+--> regex for email added
+next work 
+--> creating a otp database 
+--> creating a sign in database
