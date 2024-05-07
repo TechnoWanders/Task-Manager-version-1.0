@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{{ url_for('static', filename='js/signinfile.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/signin.css')}}">
+</head>
+<body>
+    <div id="box1">
+        <form action="/send_otp" method="POST">
+            <h4>Generate OTP</h4>
+            <label for="Email">Enter Gmail : </label>
+            <input type="email" id="rec_email" name="rec_email">
+            <button type="submit">Generate</button>
+        </form>
+    </div>
+</body>
+</html>

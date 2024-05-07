@@ -5,33 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="{{ url_for('static', filename='js/signinfile.js') }}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/signin.css')}}">
+    <title>Sign in</title>
 </head>
 <body>
-    <div id="box1">
-        <form action="/send_otp" method="POST">
-            <h4>Generate OTP</h4>
-            <label for="Email">Enter Gmail : </label>
-            <input type="email" id="rec_email" name="rec_email">
-            <button type="submit">Generate</button>
-        </form>
-
-        <button type = 'button' id="verificationotp" onclick="window.location.href='{{ url_for('verify_page') }}'">Verfication</button>
-    </div>
-
-    <button id="toggle" onclick="function2()">toggle</button>
+    
     <div class="box2">
-        
+        <form action="/create_account" method="post">
             <label for="Email">Enter Gmail : </label>
-            <input type="email" id="reciever_email" name="receriver_email">
-
+            <input type="email" id="reciever_email" name="reciever_email">
+            <br>
             <label for="Username">Enter Username : </label>
             <input type="text" id="username" name="username">
-
+            <br>
             <label for="Password">Enter Password : </label>
             <input type="password" id="password" name="password">
-
+            <br>
             <button id="genotp" onclick="runFunctions()">Create Account</button>
-        
+        </form>
     </div>
+
+    <p>{{ error_message }}</p>
 </body>
 </html>

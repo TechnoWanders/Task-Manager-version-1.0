@@ -4,9 +4,13 @@
     border: 3px solid black;
     background-color: rgb(241, 236, 236);
     padding: 10px 45px;
-    display: none;
+    display: block;
     left:32%;
     position: absolute;
+}
+
+#box4{
+    display: none;
 }
 
 .box2{
@@ -24,4 +28,13 @@
 }
 #genotp{
     margin-top: 10px;
+}
+
+#box3{
+    position: absolute;
+    border: 2px solid black;
+    padding: 10px 30px;
+    top:30%;
+    left:35%;
+    background-color: rgb(241, 236, 236);
 }

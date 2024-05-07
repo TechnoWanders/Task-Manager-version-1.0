@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main.css')}}">
+    <title>Task Manager</title>
 </head>
 <body>
     <div class="banner">
@@ -17,6 +18,7 @@
     <div class="section1">
         <button type = 'button' id="login" onclick="window.location.href='{{ url_for('login_page') }}'">Log-in</button>
         <button type = 'button' id="signin" onclick="window.location.href='{{ url_for('signin_page') }}'"> Sign-in</button>
+        <button type = 'button' id="viewdb" onclick="window.location.href='{{ url_for('database_interaction') }}'"> View DB</button>
     </div>
 </body>
 </html>
