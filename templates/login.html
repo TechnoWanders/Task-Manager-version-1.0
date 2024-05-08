@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/login.css')}}">
     <title>Login</title>
 </head>
 <body>
-    
+
+    <p>{{ message }}</p>
+
+    <div class="box1">
+        <form action="/loginverification" method="post">
+            <label for="username">Username</label>
+            <input type="text" id = "username" name="username">
+            <br><br>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+            <br><br>
+            <button id = "enter" type="submit">Enter</button>
+        </form>
+    </div>
 </body>
 </html>

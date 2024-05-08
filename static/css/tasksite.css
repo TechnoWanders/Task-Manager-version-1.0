@@ -1,0 +1,42 @@
+#notify{
+    display: none;
+}
+
+.header{
+    padding: 0;
+    height:7%;
+    width: 99vw;
+    background-color: red;
+    margin:0;
+    position: fixed;
+    border: 3px solid black;
+}
+.header h1{
+    position: absolute;
+    left: 40%;
+}
+.navbar{
+    position: absolute;
+    top:9%;
+    height: 85vh;
+    width:10%;
+    background-color: orange;
+    border: 3px solid black;
+}
+.main{
+    position: absolute;
+    background-color: pink;
+    width:87%;
+    height: 85vh;
+    top:9%;
+    left:12%;
+    border: 3px solid black;
+}
+.footer{
+    position: absolute;
+    background-color: black;
+    color: white;
+    width:99vw;
+    height:4vh;
+    top: 95%;
+}

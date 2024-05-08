@@ -1,4 +1,5 @@
 4 May 2024 
+--> PART1 [user_auth] started  
 --> index page created  
 --> responsive rules followed
 --> learned routing 
@@ -9,9 +10,27 @@ next work
 --> create login page 
 --> learn session management
 --> use of JWT for secured session 
+
 5 May 2024
 --> created OTP system
 --> regex for email added
 next work 
 --> creating a otp database 
 --> creating a sign in database
+
+7 MAY 2024
+--> fixed sign up page issue + integrated account creation with otp verification 
+--> added database interaction page 
+next work 
+--> add login page and verification for login code 
+--> add logout feature 
+--> start PART2 [TASK MANAGER CARDS] as soon as possible  
+
+8 MAY 2024
+PART2 [TASK MANAGER CARDS] started
+--> added login page and verification for login code
+--> made tasksite UI (added header, nav bar and footer)
+next work 
+--> add forgot password feature, log out password in upcoming sessions these will be added 
+    after main aim is done 
+--> designing and implementing cards methods to make tasks 

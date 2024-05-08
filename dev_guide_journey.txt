@@ -1,34 +1,34 @@
 Functional Features of this application
 
-    User Authentication:
+    PART1 User Authentication:
         User registration with username, email, and password.
         User login with username/email and password.
         User logout.
-    Task Management:
+    PART2 Task Management:
         Create new tasks with title, description, due date, and status.
         View a list of all tasks.
         Update existing tasks (edit title, description, due date, and status).
         Delete tasks.
-    Task Filtering:
+    PART3 Task Filtering:
         View all tasks.
         View only completed tasks.
         View only tasks due today.
         View tasks by category.
-    Task Categories:
+    PART4 Task Categories:
         Create new task categories.
         Assign tasks to categories.
         Edit existing categories.
         Delete categories.
-    User Dashboard:
+    PART5 User Dashboard:
         Display tasks at a glance.
         Show tasks due today.
         Show upcoming tasks.
         Display recently completed tasks.
         Provide links to manage tasks and categories.
-    User Profile:
+    PART6 User Profile:
         View user profile information (username, email).
         Edit user profile information (username, email, password).
-    Security:
+    PART7 Security:
         Password hashing for user authentication.
         Ensure that only authenticated users can access certain pages (e.g., user dashboard, task management).
     Responsive Design:

@@ -4,8 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
+    <script src="{{ url_for('static', filename='js/tasksite.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/tasksite.css')}}">
 </head>
 <body>
-    <p>{{ message }}</p>
+    
+    <header class="header">
+        <h1>TaskManager</h1>
+    </header>
+
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="Dashboard">Dashboard</a></li>
+                <li><a href="AddTasks">AddTasks</a></li>
+                <li><a href="ShowTasks">ShowTasks</a></li>
+                <li><a href="EditTasks">EditTasks</a></li>
+                <li><a href="Profile">Profile</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main">
+        <p id="notify">{{ message }} {{ username }}</p>
+    </div>
+
+    <div class="footer">
+
+    </div>
 </body>
 </html>

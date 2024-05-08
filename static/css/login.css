@@ -1,0 +1,15 @@
+.box1{
+    width: 350px;
+    height:100px;
+    position: absolute;
+    top:30%;
+    left:38%;
+    background-color: rgb(241, 236, 236);
+    padding: 20px 15px;
+    border: 3px solid black;
+}
+
+#enter{
+    position:absolute;
+    left:250px;
+}

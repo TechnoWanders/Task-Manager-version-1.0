@@ -4,7 +4,6 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import random
 from flask_sqlalchemy import SQLAlchemy
-import logging
 
 app = Flask(__name__, static_folder='static')
 app.secret_key = 'notyourbusiness'
@@ -39,6 +38,10 @@ def create_account():
     email = request.form.get('reciever_email')
     username = request.form.get('username')
     password = request.form.get('password')
+
+    if not email or not username or not password:
+        error_message = 'Please fill all the blanks'
+        return render_template('signin.html', error_message = error_message)
 
     if not is_valid_email(email):
         error_message = 'Email Address already taken'
@@ -118,12 +121,41 @@ def verify_otp():
     if request.method == 'POST':
         entered_otp = request.form['otp']
         if verify_otp_logic(entered_otp):
-            insert()
+            insert(session, db, User)
             message = 'OTP verified successfully && Account created successfully'
             return render_template('tasksite.html', message = message)
         else:
             return 'Failed to verify OTP. Please try again.'
     return 'Invalid request.'
+
+def check_verification(username, entered_password, User):
+    user = User.query.filter_by(username=username).first()
+    if not user:
+        return False
+    
+    if user.password == entered_password:
+        return True
+    else:
+        return False
+
+@app.route('/loginverification' , methods=['POST'])
+def login_verification():
+    entered_username = request.form['username']
+    entered_password = request.form['password']
+    if not entered_username or not entered_password:
+        message = 'Please fill all the blanks'
+        return render_template('login.html',message = message) 
+    
+    if check_verification(entered_username, entered_password, User):
+        message = 'Login Successful'
+        #to delete current user
+        #user_to_delete = User.query.filter_by(username=entered_username).first()
+        #db.session.delete(user_to_delete)
+        #db.session.commit()
+        return render_template('tasksite.html',message = message, username = entered_username) 
+    else:
+        message = 'Invalid Username or Password'
+        return render_template('login.html',message = message) 
 
 @app.route('/')
 def index():
